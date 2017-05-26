@@ -8,13 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		3B9E55CB1ED80EEF005F1200 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9E55CA1ED80EEF005F1200 /* AppDelegate.swift */; };
-		3B9E55CD1ED80EEF005F1200 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9E55CC1ED80EEF005F1200 /* ViewController.swift */; };
 		3B9E55D01ED80EEF005F1200 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9E55CE1ED80EEF005F1200 /* Main.storyboard */; };
 		3B9E55D31ED80EEF005F1200 /* MoneyKeeper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B9E55D11ED80EEF005F1200 /* MoneyKeeper.xcdatamodeld */; };
 		3B9E55D51ED80EEF005F1200 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B9E55D41ED80EEF005F1200 /* Assets.xcassets */; };
 		3B9E55D81ED80EEF005F1200 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9E55D61ED80EEF005F1200 /* LaunchScreen.storyboard */; };
 		3B9E55E31ED80EEF005F1200 /* MoneyKeeperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9E55E21ED80EEF005F1200 /* MoneyKeeperTests.swift */; };
 		3B9E55EE1ED80EEF005F1200 /* MoneyKeeperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9E55ED1ED80EEF005F1200 /* MoneyKeeperUITests.swift */; };
+		3B9E56001ED8102A005F1200 /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9E55FF1ED8102A005F1200 /* ContainerVC.swift */; };
+		3B9E56021ED8116F005F1200 /* ContainerVC+Sidemenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9E56011ED8116F005F1200 /* ContainerVC+Sidemenu.swift */; };
+		3B9E56051ED811B1005F1200 /* ContainerVC+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9E56041ED811B1005F1200 /* ContainerVC+Keyboard.swift */; };
+		3B9E56071ED8214E005F1200 /* MenuTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9E56061ED8214E005F1200 /* MenuTab.storyboard */; };
+		3B9E560A1ED821D8005F1200 /* MenuTabTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9E56091ED821D8005F1200 /* MenuTabTableVC.swift */; };
+		3B9E560C1ED8222B005F1200 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9E560B1ED8222B005F1200 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +42,6 @@
 /* Begin PBXFileReference section */
 		3B9E55C71ED80EEF005F1200 /* MoneyKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B9E55CA1ED80EEF005F1200 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3B9E55CC1ED80EEF005F1200 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3B9E55CF1ED80EEF005F1200 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3B9E55D21ED80EEF005F1200 /* MoneyKeeper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoneyKeeper.xcdatamodel; sourceTree = "<group>"; };
 		3B9E55D41ED80EEF005F1200 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +53,12 @@
 		3B9E55E91ED80EEF005F1200 /* MoneyKeeperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyKeeperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B9E55ED1ED80EEF005F1200 /* MoneyKeeperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyKeeperUITests.swift; sourceTree = "<group>"; };
 		3B9E55EF1ED80EEF005F1200 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B9E55FF1ED8102A005F1200 /* ContainerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
+		3B9E56011ED8116F005F1200 /* ContainerVC+Sidemenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ContainerVC+Sidemenu.swift"; sourceTree = "<group>"; };
+		3B9E56041ED811B1005F1200 /* ContainerVC+Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ContainerVC+Keyboard.swift"; sourceTree = "<group>"; };
+		3B9E56061ED8214E005F1200 /* MenuTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MenuTab.storyboard; sourceTree = "<group>"; };
+		3B9E56091ED821D8005F1200 /* MenuTabTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTabTableVC.swift; sourceTree = "<group>"; };
+		3B9E560B1ED8222B005F1200 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +110,9 @@
 			isa = PBXGroup;
 			children = (
 				3B9E55CA1ED80EEF005F1200 /* AppDelegate.swift */,
-				3B9E55CC1ED80EEF005F1200 /* ViewController.swift */,
-				3B9E55CE1ED80EEF005F1200 /* Main.storyboard */,
-				3B9E55D41ED80EEF005F1200 /* Assets.xcassets */,
-				3B9E55D61ED80EEF005F1200 /* LaunchScreen.storyboard */,
-				3B9E55D91ED80EEF005F1200 /* Info.plist */,
-				3B9E55D11ED80EEF005F1200 /* MoneyKeeper.xcdatamodeld */,
+				3B9E55FC1ED80FC7005F1200 /* Storyboard */,
+				3B9E55FB1ED80FC2005F1200 /* Controller */,
+				3B9E55FD1ED80FDB005F1200 /* Support */,
 			);
 			path = MoneyKeeper;
 			sourceTree = "<group>";
@@ -126,6 +133,54 @@
 				3B9E55EF1ED80EEF005F1200 /* Info.plist */,
 			);
 			path = MoneyKeeperUITests;
+			sourceTree = "<group>";
+		};
+		3B9E55FB1ED80FC2005F1200 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3B9E56081ED821BE005F1200 /* MenuTab */,
+				3B9E55FE1ED81004005F1200 /* Container */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3B9E55FC1ED80FC7005F1200 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				3B9E55CE1ED80EEF005F1200 /* Main.storyboard */,
+				3B9E55D61ED80EEF005F1200 /* LaunchScreen.storyboard */,
+				3B9E56061ED8214E005F1200 /* MenuTab.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		3B9E55FD1ED80FDB005F1200 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				3B9E55D11ED80EEF005F1200 /* MoneyKeeper.xcdatamodeld */,
+				3B9E55D91ED80EEF005F1200 /* Info.plist */,
+				3B9E55D41ED80EEF005F1200 /* Assets.xcassets */,
+				3B9E560B1ED8222B005F1200 /* Constant.swift */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		3B9E55FE1ED81004005F1200 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				3B9E55FF1ED8102A005F1200 /* ContainerVC.swift */,
+				3B9E56011ED8116F005F1200 /* ContainerVC+Sidemenu.swift */,
+				3B9E56041ED811B1005F1200 /* ContainerVC+Keyboard.swift */,
+			);
+			name = Container;
+			sourceTree = "<group>";
+		};
+		3B9E56081ED821BE005F1200 /* MenuTab */ = {
+			isa = PBXGroup;
+			children = (
+				3B9E56091ED821D8005F1200 /* MenuTabTableVC.swift */,
+			);
+			name = MenuTab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B9E55D81ED80EEF005F1200 /* LaunchScreen.storyboard in Resources */,
+				3B9E56071ED8214E005F1200 /* MenuTab.storyboard in Resources */,
 				3B9E55D51ED80EEF005F1200 /* Assets.xcassets in Resources */,
 				3B9E55D01ED80EEF005F1200 /* Main.storyboard in Resources */,
 			);
@@ -262,8 +318,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B9E55CD1ED80EEF005F1200 /* ViewController.swift in Sources */,
+				3B9E560C1ED8222B005F1200 /* Constant.swift in Sources */,
+				3B9E56001ED8102A005F1200 /* ContainerVC.swift in Sources */,
 				3B9E55D31ED80EEF005F1200 /* MoneyKeeper.xcdatamodeld in Sources */,
+				3B9E56021ED8116F005F1200 /* ContainerVC+Sidemenu.swift in Sources */,
+				3B9E56051ED811B1005F1200 /* ContainerVC+Keyboard.swift in Sources */,
+				3B9E560A1ED821D8005F1200 /* MenuTabTableVC.swift in Sources */,
 				3B9E55CB1ED80EEF005F1200 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
