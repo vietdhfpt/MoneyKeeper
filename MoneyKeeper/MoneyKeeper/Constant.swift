@@ -12,8 +12,4 @@ struct NotificationKey {
     static let toggleKeyBoard = "toggleKeyBoard"
 }
 
-struct SegueIdentifier {
-    static let embedHomePaymentVC         = "embedHomePaymentVC"
-    static let embedMenuTabTableVC        = "embedMenuTabTableVC"
-    static let embedCalculatorKeyBoard    = "embedCalculatorKeyBoard"
-}
+

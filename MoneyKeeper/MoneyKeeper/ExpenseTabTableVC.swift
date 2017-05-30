@@ -8,14 +8,16 @@
 
 import UIKit
 
-class PayTabTableVC: UITableViewController {
+class ExpenseTabTableVC: UITableViewController {
 
     @IBOutlet weak var textFieldView: UIView!
     @IBOutlet weak var calculateTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        configRightViewTextField()
+        
+        calculateTextField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {

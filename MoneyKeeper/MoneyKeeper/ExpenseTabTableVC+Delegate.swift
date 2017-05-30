@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension PayTabTableVC: UITextFieldDelegate {
+extension ExpenseTabTableVC: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         NotificationCenter.default.post(name: NSNotification.Name.init(rawValue: NotificationKey.toggleKeyBoard), object: nil)
         return true
@@ -16,7 +16,7 @@ extension PayTabTableVC: UITextFieldDelegate {
 }
 
 // MARK: - payment delegate
-extension PayTabTableVC: KeyboardVCDelegate {
+extension ExpenseTabTableVC: KeyboardVCDelegate {
     func passedData(data: String) {
         calculateTextField.text = data
     }
@@ -27,7 +27,7 @@ extension PayTabTableVC: KeyboardVCDelegate {
 }
 
 // MARK: - Config right image textfield
-extension PayTabTableVC {
+extension ExpenseTabTableVC {
     func configRightViewTextField() {
         calculateTextField.rightView = textFieldView
         calculateTextField.rightViewMode = .always

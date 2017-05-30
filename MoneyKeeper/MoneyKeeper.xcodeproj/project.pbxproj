@@ -20,8 +20,8 @@
 		3B9E56071ED8214E005F1200 /* MenuTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9E56061ED8214E005F1200 /* MenuTab.storyboard */; };
 		3B9E560A1ED821D8005F1200 /* MenuTabTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9E56091ED821D8005F1200 /* MenuTabTableVC.swift */; };
 		3B9E560C1ED8222B005F1200 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9E560B1ED8222B005F1200 /* Constant.swift */; };
-		3B9E560F1ED826C7005F1200 /* PayTabTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9E560E1ED826C7005F1200 /* PayTabTableVC.swift */; };
-		3B9E56111ED82776005F1200 /* PayTabTableVC+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9E56101ED82776005F1200 /* PayTabTableVC+Delegate.swift */; };
+		3B9E560F1ED826C7005F1200 /* ExpenseTabTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9E560E1ED826C7005F1200 /* ExpenseTabTableVC.swift */; };
+		3B9E56111ED82776005F1200 /* ExpenseTabTableVC+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9E56101ED82776005F1200 /* ExpenseTabTableVC+Delegate.swift */; };
 		3B9E56141ED82805005F1200 /* KeyboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9E56131ED82805005F1200 /* KeyboardVC.swift */; };
 		3B9E56161ED82DA5005F1200 /* Keyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9E56151ED82DA5005F1200 /* Keyboard.storyboard */; };
 /* End PBXBuildFile section */
@@ -63,8 +63,8 @@
 		3B9E56061ED8214E005F1200 /* MenuTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MenuTab.storyboard; sourceTree = "<group>"; };
 		3B9E56091ED821D8005F1200 /* MenuTabTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTabTableVC.swift; sourceTree = "<group>"; };
 		3B9E560B1ED8222B005F1200 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		3B9E560E1ED826C7005F1200 /* PayTabTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayTabTableVC.swift; sourceTree = "<group>"; };
-		3B9E56101ED82776005F1200 /* PayTabTableVC+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PayTabTableVC+Delegate.swift"; sourceTree = "<group>"; };
+		3B9E560E1ED826C7005F1200 /* ExpenseTabTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseTabTableVC.swift; sourceTree = "<group>"; };
+		3B9E56101ED82776005F1200 /* ExpenseTabTableVC+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExpenseTabTableVC+Delegate.swift"; sourceTree = "<group>"; };
 		3B9E56131ED82805005F1200 /* KeyboardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardVC.swift; sourceTree = "<group>"; };
 		3B9E56151ED82DA5005F1200 /* Keyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Keyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -188,19 +188,19 @@
 		3B9E56081ED821BE005F1200 /* MenuTab */ = {
 			isa = PBXGroup;
 			children = (
-				3B9E560D1ED8263C005F1200 /* Menu+Container */,
+				3B9E560D1ED8263C005F1200 /* Expense */,
 				3B9E56091ED821D8005F1200 /* MenuTabTableVC.swift */,
 			);
 			name = MenuTab;
 			sourceTree = "<group>";
 		};
-		3B9E560D1ED8263C005F1200 /* Menu+Container */ = {
+		3B9E560D1ED8263C005F1200 /* Expense */ = {
 			isa = PBXGroup;
 			children = (
-				3B9E560E1ED826C7005F1200 /* PayTabTableVC.swift */,
-				3B9E56101ED82776005F1200 /* PayTabTableVC+Delegate.swift */,
+				3B9E560E1ED826C7005F1200 /* ExpenseTabTableVC.swift */,
+				3B9E56101ED82776005F1200 /* ExpenseTabTableVC+Delegate.swift */,
 			);
-			name = "Menu+Container";
+			name = Expense;
 			sourceTree = "<group>";
 		};
 		3B9E56121ED827E9005F1200 /* Keyboard */ = {
@@ -347,7 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B9E560F1ED826C7005F1200 /* PayTabTableVC.swift in Sources */,
+				3B9E560F1ED826C7005F1200 /* ExpenseTabTableVC.swift in Sources */,
 				3B9E560C1ED8222B005F1200 /* Constant.swift in Sources */,
 				3B9E56001ED8102A005F1200 /* ContainerVC.swift in Sources */,
 				3B9E56141ED82805005F1200 /* KeyboardVC.swift in Sources */,
@@ -355,7 +355,7 @@
 				3B9E56021ED8116F005F1200 /* ContainerVC+Sidemenu.swift in Sources */,
 				3B9E56051ED811B1005F1200 /* ContainerVC+Keyboard.swift in Sources */,
 				3B9E560A1ED821D8005F1200 /* MenuTabTableVC.swift in Sources */,
-				3B9E56111ED82776005F1200 /* PayTabTableVC+Delegate.swift in Sources */,
+				3B9E56111ED82776005F1200 /* ExpenseTabTableVC+Delegate.swift in Sources */,
 				3B9E55CB1ED80EEF005F1200 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
