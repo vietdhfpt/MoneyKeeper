@@ -47,7 +47,6 @@ class KeyboardVC: UIViewController {
     }
     
     @IBAction func handleButtonPress(_ sender: UIButton) {
-        
         let currentText = resultData
         let textLabel = sender.titleLabel?.text
         if let text = textLabel {
@@ -80,25 +79,4 @@ class KeyboardVC: UIViewController {
             
         }
     }
-    
-    func calculate() -> Double {
-        let firstNumber = Double(firstNumberText)!
-        let secondNumber = Double(secondNumberText)!
-        firstNumberText = ""
-        secondNumberText = ""
-        switch op {
-        case "+":
-            return firstNumber + secondNumber
-        case "-":
-            return firstNumber - secondNumber
-        case "x":
-            return firstNumber * secondNumber
-        case ":":
-            return firstNumber / secondNumber
-        default:
-            return 0
-        }
-    }
-
-
 }

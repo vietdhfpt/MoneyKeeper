@@ -13,6 +13,11 @@ class ExpenseTabTableVC: UITableViewController {
     @IBOutlet weak var textFieldView: UIView!
     @IBOutlet weak var calculateTextField: UITextField!
     
+    static var instance: ExpenseTabTableVC {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        return storyboard.instantiateViewController(withIdentifier: "ExpenseTabTableVC") as! ExpenseTabTableVC
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configRightViewTextField()
@@ -24,6 +29,4 @@ class ExpenseTabTableVC: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    
 }

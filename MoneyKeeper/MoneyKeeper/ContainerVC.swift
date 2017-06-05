@@ -11,7 +11,7 @@ import UIKit
 struct SegueIdentifier {
     static let embedMenuTabTableVC = "embedMenuTabTableVC"
     static let embedKeyboard       = "embedKeyboard"
-    static let embedExpenseTabTableVC = "embedExpenseTabTableVC"
+    static let embedPageVC         = "embedPageVC"
 }
 
 class ContainerVC: UIViewController {
@@ -36,13 +36,18 @@ class ContainerVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         configView()
         isOpenMenu = false
         
         isOpenKeyBoard = false
         registerNotification()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -59,6 +64,7 @@ class ContainerVC: UIViewController {
     var menuTabTableVC: MenuTabTableVC?
     var keyboardVC: KeyboardVC?
     var expenseTabTableVC: ExpenseTabTableVC?
+    var pageVC: PageVC?
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier ?? "" {
@@ -67,11 +73,15 @@ class ContainerVC: UIViewController {
         case SegueIdentifier.embedKeyboard:
             keyboardVC = segue.destination as? KeyboardVC
             keyboardVC?.delegate = expenseTabTableVC
-        case SegueIdentifier.embedExpenseTabTableVC:
-            expenseTabTableVC = segue.destination as? ExpenseTabTableVC
+        case SegueIdentifier.embedPageVC:
+            pageVC = segue.destination as? PageVC
         default:
             break
         }
+    }
+
+    @IBAction func Save_Button(_ sender: UIBarButtonItem) {
+        pageVC?.jump(toIndex: 1)
     }
 }
 

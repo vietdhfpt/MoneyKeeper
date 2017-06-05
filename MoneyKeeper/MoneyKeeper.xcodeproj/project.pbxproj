@@ -24,6 +24,13 @@
 		3B9E56111ED82776005F1200 /* ExpenseTabTableVC+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9E56101ED82776005F1200 /* ExpenseTabTableVC+Delegate.swift */; };
 		3B9E56141ED82805005F1200 /* KeyboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9E56131ED82805005F1200 /* KeyboardVC.swift */; };
 		3B9E56161ED82DA5005F1200 /* Keyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9E56151ED82DA5005F1200 /* Keyboard.storyboard */; };
+		8D0F6BD31EE4DE5700E46AD5 /* Extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0F6BD21EE4DE5700E46AD5 /* Extension+UIColor.swift */; };
+		8D12928B1EE69F2500CDB8E9 /* IncomeTabTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D12928A1EE69F2500CDB8E9 /* IncomeTabTableVC.swift */; };
+		8D12928D1EE69F4900CDB8E9 /* TransferTabTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D12928C1EE69F4900CDB8E9 /* TransferTabTableVC.swift */; };
+		8D12928F1EE69F6300CDB8E9 /* AdjustmentTabTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D12928E1EE69F6300CDB8E9 /* AdjustmentTabTableVC.swift */; };
+		8D1292911EE6A28600CDB8E9 /* BaseModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1292901EE6A28600CDB8E9 /* BaseModelController.swift */; };
+		8D1292931EE6AB6F00CDB8E9 /* KeyboardVC+calculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1292921EE6AB6F00CDB8E9 /* KeyboardVC+calculate.swift */; };
+		8D1CF2C21EDD80C500B45DB5 /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1CF2C11EDD80C500B45DB5 /* PageVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +74,13 @@
 		3B9E56101ED82776005F1200 /* ExpenseTabTableVC+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExpenseTabTableVC+Delegate.swift"; sourceTree = "<group>"; };
 		3B9E56131ED82805005F1200 /* KeyboardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardVC.swift; sourceTree = "<group>"; };
 		3B9E56151ED82DA5005F1200 /* Keyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Keyboard.storyboard; sourceTree = "<group>"; };
+		8D0F6BD21EE4DE5700E46AD5 /* Extension+UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIColor.swift"; sourceTree = "<group>"; };
+		8D12928A1EE69F2500CDB8E9 /* IncomeTabTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncomeTabTableVC.swift; sourceTree = "<group>"; };
+		8D12928C1EE69F4900CDB8E9 /* TransferTabTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferTabTableVC.swift; sourceTree = "<group>"; };
+		8D12928E1EE69F6300CDB8E9 /* AdjustmentTabTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdjustmentTabTableVC.swift; sourceTree = "<group>"; };
+		8D1292901EE6A28600CDB8E9 /* BaseModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModelController.swift; sourceTree = "<group>"; };
+		8D1292921EE6AB6F00CDB8E9 /* KeyboardVC+calculate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KeyboardVC+calculate.swift"; sourceTree = "<group>"; };
+		8D1CF2C11EDD80C500B45DB5 /* PageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +185,7 @@
 				3B9E55D91ED80EEF005F1200 /* Info.plist */,
 				3B9E55D41ED80EEF005F1200 /* Assets.xcassets */,
 				3B9E560B1ED8222B005F1200 /* Constant.swift */,
+				8D0F6BD21EE4DE5700E46AD5 /* Extension+UIColor.swift */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -178,6 +193,7 @@
 		3B9E55FE1ED81004005F1200 /* Container */ = {
 			isa = PBXGroup;
 			children = (
+				8DF819871EE6CF1E003C0723 /* PageVC */,
 				3B9E55FF1ED8102A005F1200 /* ContainerVC.swift */,
 				3B9E56011ED8116F005F1200 /* ContainerVC+Sidemenu.swift */,
 				3B9E56041ED811B1005F1200 /* ContainerVC+Keyboard.swift */,
@@ -188,8 +204,11 @@
 		3B9E56081ED821BE005F1200 /* MenuTab */ = {
 			isa = PBXGroup;
 			children = (
-				3B9E560D1ED8263C005F1200 /* Expense */,
 				3B9E56091ED821D8005F1200 /* MenuTabTableVC.swift */,
+				8D1292891EE69E9B00CDB8E9 /* Adjustment */,
+				8D1292881EE69E9200CDB8E9 /* Transfer */,
+				8D1292871EE69E8800CDB8E9 /* Income */,
+				3B9E560D1ED8263C005F1200 /* Expense */,
 			);
 			name = MenuTab;
 			sourceTree = "<group>";
@@ -207,8 +226,42 @@
 			isa = PBXGroup;
 			children = (
 				3B9E56131ED82805005F1200 /* KeyboardVC.swift */,
+				8D1292921EE6AB6F00CDB8E9 /* KeyboardVC+calculate.swift */,
 			);
 			name = Keyboard;
+			sourceTree = "<group>";
+		};
+		8D1292871EE69E8800CDB8E9 /* Income */ = {
+			isa = PBXGroup;
+			children = (
+				8D12928A1EE69F2500CDB8E9 /* IncomeTabTableVC.swift */,
+			);
+			name = Income;
+			sourceTree = "<group>";
+		};
+		8D1292881EE69E9200CDB8E9 /* Transfer */ = {
+			isa = PBXGroup;
+			children = (
+				8D12928C1EE69F4900CDB8E9 /* TransferTabTableVC.swift */,
+			);
+			name = Transfer;
+			sourceTree = "<group>";
+		};
+		8D1292891EE69E9B00CDB8E9 /* Adjustment */ = {
+			isa = PBXGroup;
+			children = (
+				8D12928E1EE69F6300CDB8E9 /* AdjustmentTabTableVC.swift */,
+			);
+			name = Adjustment;
+			sourceTree = "<group>";
+		};
+		8DF819871EE6CF1E003C0723 /* PageVC */ = {
+			isa = PBXGroup;
+			children = (
+				8D1292901EE6A28600CDB8E9 /* BaseModelController.swift */,
+				8D1CF2C11EDD80C500B45DB5 /* PageVC.swift */,
+			);
+			name = PageVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,14 +402,21 @@
 			files = (
 				3B9E560F1ED826C7005F1200 /* ExpenseTabTableVC.swift in Sources */,
 				3B9E560C1ED8222B005F1200 /* Constant.swift in Sources */,
+				8D12928B1EE69F2500CDB8E9 /* IncomeTabTableVC.swift in Sources */,
 				3B9E56001ED8102A005F1200 /* ContainerVC.swift in Sources */,
+				8D1292911EE6A28600CDB8E9 /* BaseModelController.swift in Sources */,
+				8D1292931EE6AB6F00CDB8E9 /* KeyboardVC+calculate.swift in Sources */,
 				3B9E56141ED82805005F1200 /* KeyboardVC.swift in Sources */,
 				3B9E55D31ED80EEF005F1200 /* MoneyKeeper.xcdatamodeld in Sources */,
 				3B9E56021ED8116F005F1200 /* ContainerVC+Sidemenu.swift in Sources */,
+				8D1CF2C21EDD80C500B45DB5 /* PageVC.swift in Sources */,
 				3B9E56051ED811B1005F1200 /* ContainerVC+Keyboard.swift in Sources */,
 				3B9E560A1ED821D8005F1200 /* MenuTabTableVC.swift in Sources */,
+				8D12928F1EE69F6300CDB8E9 /* AdjustmentTabTableVC.swift in Sources */,
+				8D12928D1EE69F4900CDB8E9 /* TransferTabTableVC.swift in Sources */,
 				3B9E56111ED82776005F1200 /* ExpenseTabTableVC+Delegate.swift in Sources */,
 				3B9E55CB1ED80EEF005F1200 /* AppDelegate.swift in Sources */,
+				8D0F6BD31EE4DE5700E46AD5 /* Extension+UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

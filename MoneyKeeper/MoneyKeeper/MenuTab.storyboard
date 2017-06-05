@@ -124,6 +124,12 @@
                             <outlet property="delegate" destination="loW-eY-4pl" id="tS3-s2-412"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="adjustmentTabCell" destination="Zu9-P6-Drn" id="eZI-76-af0"/>
+                        <outlet property="expenseTabCell" destination="t4c-2L-khr" id="fhd-Zn-q1a"/>
+                        <outlet property="incomeTabCell" destination="Pyv-4h-jvN" id="Oha-v3-v96"/>
+                        <outlet property="transferTabCell" destination="AYL-Pp-dDe" id="rBm-Ld-nfe"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S8e-Ij-2hx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
