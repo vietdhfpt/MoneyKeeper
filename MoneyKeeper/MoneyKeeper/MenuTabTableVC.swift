@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol MenuTabTableVCDelegate {
+    func passedIndexOfPageVC(toIndex: Int)
+    func shouldDismissSideMenu()
+}
+
 class MenuTabTableVC: UITableViewController {
     // Cell
     @IBOutlet weak var expenseTabCell: UITableViewCell!
@@ -15,17 +20,12 @@ class MenuTabTableVC: UITableViewController {
     @IBOutlet weak var transferTabCell: UITableViewCell!
     @IBOutlet weak var adjustmentTabCell: UITableViewCell!
     
-    enum CellType: Int {
-        case expenseTabCell
-        case incomeTabCell
-        case transferTabCell
-        case adjustmentTabCell
-    }
-    
     var index = 0
     
+    var delegate: MenuTabTableVCDelegate?
+    
     weak var pageVC: PageVC?
-    weak var containerVC: ContainerVC!
+    weak var containerVC: ContainerVC?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,13 +42,17 @@ class MenuTabTableVC: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
         if cell === expenseTabCell {
-            pageVC?.jump(toIndex: 0)
+            delegate?.passedIndexOfPageVC(toIndex: index)
+            delegate?.shouldDismissSideMenu()
         } else  if cell === incomeTabCell {
-            pageVC?.jump(toIndex: index + 1)
+            delegate?.passedIndexOfPageVC(toIndex: index + 1)
+            delegate?.shouldDismissSideMenu()
         } else  if cell === transferTabCell {
-            pageVC?.jump(toIndex: index + 2)
+            delegate?.passedIndexOfPageVC(toIndex: index + 2)
+            delegate?.shouldDismissSideMenu()
         } else  if cell === adjustmentTabCell {
-            pageVC?.jump(toIndex: index + 3)
+            delegate?.passedIndexOfPageVC(toIndex: index + 3)
+            delegate?.shouldDismissSideMenu()
         }
     }
 

@@ -36,7 +36,6 @@ class ContainerVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -70,6 +69,7 @@ class ContainerVC: UIViewController {
         switch segue.identifier ?? "" {
         case SegueIdentifier.embedMenuTabTableVC:
             menuTabTableVC = segue.destination as? MenuTabTableVC
+            menuTabTableVC?.delegate = self
         case SegueIdentifier.embedKeyboard:
             keyboardVC = segue.destination as? KeyboardVC
             keyboardVC?.delegate = expenseTabTableVC
@@ -80,8 +80,15 @@ class ContainerVC: UIViewController {
         }
     }
 
-    @IBAction func Save_Button(_ sender: UIBarButtonItem) {
-        pageVC?.jump(toIndex: 1)
+}
+
+extension ContainerVC: MenuTabTableVCDelegate {
+    func passedIndexOfPageVC(toIndex: Int) {
+        pageVC?.jump(toIndex: toIndex)
+    }
+    
+    func shouldDismissSideMenu() {
+        changeMenuStage()
     }
 }
 

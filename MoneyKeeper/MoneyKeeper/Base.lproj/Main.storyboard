@@ -14,7 +14,7 @@
         <!--ContainerVC-->
         <scene sceneID="iO9-lA-VP5">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="dgb-Q3-pkr" customClass="ContainerVC" customModule="MoneyKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContainerVC" automaticallyAdjustsScrollViewInsets="NO" id="dgb-Q3-pkr" customClass="ContainerVC" customModule="MoneyKeeper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pfn-Oy-VEO"/>
                         <viewControllerLayoutGuide type="bottom" id="7uq-PK-shY"/>
@@ -168,7 +168,7 @@
         <!--PageVC-->
         <scene sceneID="gSg-Ar-syH">
             <objects>
-                <pageViewController storyboardIdentifier="FirstVC" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" pageSpacing="2" navigationOrientation="horizontal" spineLocation="none" id="la3-CJ-Mvf" customClass="PageVC" customModule="MoneyKeeper" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="FirstVC" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="la3-CJ-Mvf" customClass="PageVC" customModule="MoneyKeeper" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GZ7-X6-DQ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3135" y="-66"/>
@@ -192,7 +192,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Transfer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="K6h-8u-ORk">
-                                                    <rect key="frame" x="15" y="0.0" width="384" height="43.666666666666664"/>
+                                                    <rect key="frame" x="20" y="0.0" width="379" height="43.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -249,7 +249,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Income" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="myh-mK-OTE">
-                                                    <rect key="frame" x="15" y="0.0" width="384" height="43.666666666666664"/>
+                                                    <rect key="frame" x="20" y="0.0" width="379" height="43.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -722,7 +722,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Adjustment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ujZ-oI-YJX">
-                                                    <rect key="frame" x="15" y="0.0" width="384" height="43.666666666666664"/>
+                                                    <rect key="frame" x="20" y="0.0" width="379" height="43.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>

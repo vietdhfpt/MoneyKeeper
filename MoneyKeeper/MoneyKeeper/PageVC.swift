@@ -13,7 +13,7 @@ class PageVC: UIPageViewController {
     var modelController = BaseModelController()
     var startViewControllerIndex = 0
     var index = 0
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,8 +51,6 @@ class PageVC: UIPageViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    weak var containerVC: ContainerVC?
-    
     func jump(toIndex: Int, animated: Bool = true) {
         guard toIndex != NSNotFound && toIndex >= 0 else {
             return
@@ -68,14 +66,5 @@ class PageVC: UIPageViewController {
 extension PageVC: UIPageViewControllerDelegate {
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
         return modelController.viewcontrollers.count
-    }
-    
-    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-//        if let identifier = viewControllers?.first?.restorationIdentifier {
-//            if let index = viewControllers.index(of: ExpenseTabTableVC) {
-//                return index
-//            }
-//        }
-        return 0
     }
 }
