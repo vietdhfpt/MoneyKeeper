@@ -33,7 +33,7 @@
                                 <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n9I-74-71M">
-                                <rect key="frame" x="0.0" y="64" width="414" height="187"/>
+                                <rect key="frame" x="0.0" y="64.000000000000014" width="414" height="187.33333333333337"/>
                                 <connections>
                                     <segue destination="ftW-C2-BNC" kind="embed" identifier="embedMenuTabTableVC" id="b3i-wd-R3N"/>
                                 </connections>
@@ -54,7 +54,7 @@
                                 <color key="selectedImageTintColor" red="0.27058823529999998" green="0.63137254899999995" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
                             </tabBar>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="evU-z1-gdH">
-                                <rect key="frame" x="0.0" y="487" width="414" height="249"/>
+                                <rect key="frame" x="0.0" y="486.66666666666674" width="414" height="249.33333333333326"/>
                                 <connections>
                                     <segue destination="xet-dS-D3o" kind="embed" identifier="embedKeyboard" id="vQJ-ED-chv"/>
                                 </connections>
@@ -87,23 +87,23 @@
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" image="Book" id="yuq-Qf-Vp3"/>
                         <view key="titleView" contentMode="scaleToFill" id="a10-0o-80T">
-                            <rect key="frame" x="95.5" y="5.5" width="223" height="33"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <rect key="frame" x="103" y="6" width="209" height="33"/>
+                            <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNe-X7-eyB">
-                                    <rect key="frame" x="0.0" y="0.0" width="223" height="33"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="209" height="33"/>
                                     <color key="backgroundColor" red="0.18039215689999999" green="0.57647058819999997" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
                                     <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
-                                    <inset key="imageEdgeInsets" minX="195" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="imageEdgeInsets" minX="185" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     <state key="normal" title="Expense" image="Sort_down"/>
                                     <connections>
                                         <action selector="showMenu:" destination="dgb-Q3-pkr" eventType="touchUpInside" id="VAV-ys-GFL"/>
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="FNe-X7-eyB" firstAttribute="top" secondItem="a10-0o-80T" secondAttribute="top" id="5j5-VE-TrI"/>
                                 <constraint firstAttribute="bottom" secondItem="FNe-X7-eyB" secondAttribute="bottom" id="Az1-fJ-FCE"/>
@@ -122,6 +122,7 @@
                         <outlet property="buttonCover" destination="Yxa-Hw-Wwi" id="eVh-jR-heK"/>
                         <outlet property="keyBoardView" destination="evU-z1-gdH" id="5n9-ie-nbW"/>
                         <outlet property="menuView" destination="n9I-74-71M" id="WPu-Va-O4O"/>
+                        <outlet property="nameTitleOfButton" destination="FNe-X7-eyB" id="DT7-2a-UWX"/>
                         <outlet property="topConstrainMenuView" destination="1Mo-4v-jgq" id="JvK-0v-7ik"/>
                     </connections>
                 </viewController>
@@ -192,7 +193,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Transfer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="K6h-8u-ORk">
-                                                    <rect key="frame" x="20" y="0.0" width="379" height="43.666666666666664"/>
+                                                    <rect key="frame" x="15" y="0.0" width="384" height="43.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -249,7 +250,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Income" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="myh-mK-OTE">
-                                                    <rect key="frame" x="20" y="0.0" width="379" height="43.666666666666664"/>
+                                                    <rect key="frame" x="15" y="0.0" width="384" height="43.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -317,9 +318,8 @@
                                                 <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sZy-O1-fSq">
                                                     <rect key="frame" x="8" y="0.0" width="398" height="59"/>
                                                     <subviews>
-                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Số tiền" textAlignment="right" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="onA-Cb-NK1">
-                                                            <rect key="frame" x="0.0" y="0.0" width="398" height="60"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Số tiền" textAlignment="right" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="onA-Cb-NK1">
+                                                            <rect key="frame" x="0.0" y="0.0" width="398" height="59"/>
                                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
@@ -327,6 +327,12 @@
                                                         </textField>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="onA-Cb-NK1" secondAttribute="trailing" id="lEm-HP-J4B"/>
+                                                        <constraint firstAttribute="bottom" secondItem="onA-Cb-NK1" secondAttribute="bottom" id="sYH-ox-N0h"/>
+                                                        <constraint firstItem="onA-Cb-NK1" firstAttribute="leading" secondItem="sZy-O1-fSq" secondAttribute="leading" id="wwA-ua-raH"/>
+                                                        <constraint firstItem="onA-Cb-NK1" firstAttribute="top" secondItem="sZy-O1-fSq" secondAttribute="top" id="xfW-hq-Kfu"/>
+                                                    </constraints>
                                                 </view>
                                             </subviews>
                                             <constraints>
@@ -722,7 +728,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Adjustment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ujZ-oI-YJX">
-                                                    <rect key="frame" x="20" y="0.0" width="379" height="43.666666666666664"/>
+                                                    <rect key="frame" x="15" y="0.0" width="384" height="43.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>

@@ -15,7 +15,8 @@ struct SegueIdentifier {
 }
 
 class ContainerVC: UIViewController {
-
+    @IBOutlet weak var nameTitleOfButton: UIButton!
+    
     @IBOutlet weak var menuView: UIView!
     @IBOutlet weak var buttonCover: UIButton!
     @IBOutlet weak var topConstrainMenuView: NSLayoutConstraint!
@@ -42,7 +43,6 @@ class ContainerVC: UIViewController {
         super.viewWillAppear(animated)
         configView()
         isOpenMenu = false
-        
         isOpenKeyBoard = false
         registerNotification()
     }
@@ -79,7 +79,6 @@ class ContainerVC: UIViewController {
             break
         }
     }
-
 }
 
 extension ContainerVC: MenuTabTableVCDelegate {
@@ -88,7 +87,11 @@ extension ContainerVC: MenuTabTableVCDelegate {
     }
     
     func shouldDismissSideMenu() {
-        changeMenuStage()
+        isOpenMenu = !isOpenMenu
+    }
+    
+    func nameTitleOfMenuTab(title: String) {
+        nameTitleOfButton.titleLabel?.text = title
     }
 }
 

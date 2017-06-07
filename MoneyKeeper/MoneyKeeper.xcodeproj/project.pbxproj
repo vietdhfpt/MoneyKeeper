@@ -160,9 +160,7 @@
 		3B9E55FB1ED80FC2005F1200 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3B9E56121ED827E9005F1200 /* Keyboard */,
-				3B9E56081ED821BE005F1200 /* MenuTab */,
-				3B9E55FE1ED81004005F1200 /* Container */,
+				3B9E55FE1ED81004005F1200 /* Container+Manage */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -190,15 +188,15 @@
 			name = Support;
 			sourceTree = "<group>";
 		};
-		3B9E55FE1ED81004005F1200 /* Container */ = {
+		3B9E55FE1ED81004005F1200 /* Container+Manage */ = {
 			isa = PBXGroup;
 			children = (
-				8DF819871EE6CF1E003C0723 /* PageVC */,
-				3B9E55FF1ED8102A005F1200 /* ContainerVC.swift */,
-				3B9E56011ED8116F005F1200 /* ContainerVC+Sidemenu.swift */,
-				3B9E56041ED811B1005F1200 /* ContainerVC+Keyboard.swift */,
+				8D2E92431EE833860009990B /* Container */,
+				3B9E56121ED827E9005F1200 /* Keyboard */,
+				3B9E56081ED821BE005F1200 /* MenuTab */,
+				8DF819871EE6CF1E003C0723 /* PageOfContainer */,
 			);
-			name = Container;
+			name = "Container+Manage";
 			sourceTree = "<group>";
 		};
 		3B9E56081ED821BE005F1200 /* MenuTab */ = {
@@ -255,13 +253,23 @@
 			name = Adjustment;
 			sourceTree = "<group>";
 		};
-		8DF819871EE6CF1E003C0723 /* PageVC */ = {
+		8D2E92431EE833860009990B /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				3B9E55FF1ED8102A005F1200 /* ContainerVC.swift */,
+				3B9E56041ED811B1005F1200 /* ContainerVC+Keyboard.swift */,
+				3B9E56011ED8116F005F1200 /* ContainerVC+Sidemenu.swift */,
+			);
+			name = Container;
+			sourceTree = "<group>";
+		};
+		8DF819871EE6CF1E003C0723 /* PageOfContainer */ = {
 			isa = PBXGroup;
 			children = (
 				8D1292901EE6A28600CDB8E9 /* BaseModelController.swift */,
 				8D1CF2C11EDD80C500B45DB5 /* PageVC.swift */,
 			);
-			name = PageVC;
+			name = PageOfContainer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +340,7 @@
 				TargetAttributes = {
 					3B9E55C61ED80EEF005F1200 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = K6265BR55C;
 						ProvisioningStyle = Automatic;
 					};
 					3B9E55DD1ED80EEF005F1200 = {
@@ -568,11 +577,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K6265BR55C;
 				INFOPLIST_FILE = MoneyKeeper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = origin.MoneyKeeper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -580,11 +591,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K6265BR55C;
 				INFOPLIST_FILE = MoneyKeeper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = origin.MoneyKeeper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

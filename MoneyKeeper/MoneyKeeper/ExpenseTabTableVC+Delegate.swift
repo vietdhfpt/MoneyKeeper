@@ -11,6 +11,7 @@ import UIKit
 extension ExpenseTabTableVC: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         NotificationCenter.default.post(name: NSNotification.Name.init(rawValue: NotificationKey.toggleKeyBoard), object: nil)
+        calculateTextField.resignFirstResponder()
         return true
     }
 }

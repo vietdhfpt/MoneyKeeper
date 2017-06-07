@@ -11,6 +11,7 @@ import UIKit
 protocol MenuTabTableVCDelegate {
     func passedIndexOfPageVC(toIndex: Int)
     func shouldDismissSideMenu()
+    func nameTitleOfMenuTab(title: String)
 }
 
 class MenuTabTableVC: UITableViewController {
@@ -40,20 +41,31 @@ class MenuTabTableVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
+        var cell = tableView.cellForRow(at: indexPath)
         if cell === expenseTabCell {
             delegate?.passedIndexOfPageVC(toIndex: index)
             delegate?.shouldDismissSideMenu()
+            cell = tableView.cellForRow(at: indexPath)
+            let text = cell?.textLabel?.text
+            delegate?.nameTitleOfMenuTab(title: text!)
         } else  if cell === incomeTabCell {
             delegate?.passedIndexOfPageVC(toIndex: index + 1)
             delegate?.shouldDismissSideMenu()
+            cell = tableView.cellForRow(at: indexPath)
+            let text = cell?.textLabel?.text
+            delegate?.nameTitleOfMenuTab(title: text!)
         } else  if cell === transferTabCell {
             delegate?.passedIndexOfPageVC(toIndex: index + 2)
             delegate?.shouldDismissSideMenu()
+            cell = tableView.cellForRow(at: indexPath)
+            let text = cell?.textLabel?.text
+            delegate?.nameTitleOfMenuTab(title: text!)
         } else  if cell === adjustmentTabCell {
             delegate?.passedIndexOfPageVC(toIndex: index + 3)
             delegate?.shouldDismissSideMenu()
+            cell = tableView.cellForRow(at: indexPath)
+            let text = cell?.textLabel?.text
+            delegate?.nameTitleOfMenuTab(title: text!)
         }
     }
-
 }
