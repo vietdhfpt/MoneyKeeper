@@ -32,7 +32,7 @@ extension ContainerVC {
     
     func configView() {
         buttonCover.backgroundColor = UIColor.black
-        buttonCover.addTarget(self, action: #selector(changeMenuStage), for: UIControlEvents.touchDown)
+        buttonCover.addTarget(self, action: #selector(showMenu), for: UIControlEvents.touchDown)
         // shadow
         menuView.layer.shadowColor = UIColor.black.withAlphaComponent(0.5).cgColor
         menuView.layer.shadowOffset = CGSize(width: 10, height: 0)
@@ -49,11 +49,8 @@ extension ContainerVC {
         buttonCover.alpha = 0
     }
     
-    func changeMenuStage() {
-        isOpenMenu = !isOpenMenu
-    }
-    
     @IBAction func showMenu(_ sender: UIButton) {
-        changeMenuStage()
+        isOpenMenu = !isOpenMenu
+
     }
 }

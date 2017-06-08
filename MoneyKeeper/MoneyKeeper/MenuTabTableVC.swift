@@ -10,8 +10,7 @@ import UIKit
 
 protocol MenuTabTableVCDelegate {
     func passedIndexOfPageVC(toIndex: Int)
-    func shouldDismissSideMenu()
-    func nameTitleOfMenuTab(title: String)
+    var title: String? {get set}
 }
 
 class MenuTabTableVC: UITableViewController {
@@ -20,8 +19,6 @@ class MenuTabTableVC: UITableViewController {
     @IBOutlet weak var incomeTabCell: UITableViewCell!
     @IBOutlet weak var transferTabCell: UITableViewCell!
     @IBOutlet weak var adjustmentTabCell: UITableViewCell!
-    
-    var index = 0
     
     var delegate: MenuTabTableVCDelegate?
     
@@ -41,31 +38,9 @@ class MenuTabTableVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var cell = tableView.cellForRow(at: indexPath)
-        if cell === expenseTabCell {
-            delegate?.passedIndexOfPageVC(toIndex: index)
-            delegate?.shouldDismissSideMenu()
-            cell = tableView.cellForRow(at: indexPath)
-            let text = cell?.textLabel?.text
-            delegate?.nameTitleOfMenuTab(title: text!)
-        } else  if cell === incomeTabCell {
-            delegate?.passedIndexOfPageVC(toIndex: index + 1)
-            delegate?.shouldDismissSideMenu()
-            cell = tableView.cellForRow(at: indexPath)
-            let text = cell?.textLabel?.text
-            delegate?.nameTitleOfMenuTab(title: text!)
-        } else  if cell === transferTabCell {
-            delegate?.passedIndexOfPageVC(toIndex: index + 2)
-            delegate?.shouldDismissSideMenu()
-            cell = tableView.cellForRow(at: indexPath)
-            let text = cell?.textLabel?.text
-            delegate?.nameTitleOfMenuTab(title: text!)
-        } else  if cell === adjustmentTabCell {
-            delegate?.passedIndexOfPageVC(toIndex: index + 3)
-            delegate?.shouldDismissSideMenu()
-            cell = tableView.cellForRow(at: indexPath)
-            let text = cell?.textLabel?.text
-            delegate?.nameTitleOfMenuTab(title: text!)
-        }
+        let cell = tableView.cellForRow(at: indexPath)
+        let text = cell?.textLabel?.text ?? ""
+        delegate?.passedIndexOfPageVC(toIndex: indexPath.row)
+        delegate?.title = text
     }
 }

@@ -16,13 +16,21 @@ struct SegueIdentifier {
 
 class ContainerVC: UIViewController {
     @IBOutlet weak var nameTitleOfButton: UIButton!
-    
     @IBOutlet weak var menuView: UIView!
+    
+    // constrain menu
     @IBOutlet weak var buttonCover: UIButton!
     @IBOutlet weak var topConstrainMenuView: NSLayoutConstraint!
     var isOpenMenu: Bool = false {
         didSet {
             setMenuStage(with: isOpenMenu)
+        }
+    }
+    
+    override var title: String? {
+        didSet {
+            nameTitleOfButton.titleLabel?.text = title ?? ""
+
         }
     }
     
@@ -84,15 +92,8 @@ class ContainerVC: UIViewController {
 extension ContainerVC: MenuTabTableVCDelegate {
     func passedIndexOfPageVC(toIndex: Int) {
         pageVC?.jump(toIndex: toIndex)
-    }
-    
-    func shouldDismissSideMenu() {
-        isOpenMenu = !isOpenMenu
-    }
-    
-    func nameTitleOfMenuTab(title: String) {
-        nameTitleOfButton.titleLabel?.text = title
-    }
+        isOpenMenu = false
+    }    
 }
 
 
