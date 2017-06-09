@@ -10,11 +10,10 @@ import UIKit
 
 protocol KeyboardVCDelegate {
     func passedData(data: String)
-    func shouldDismissKeyboard()
 }
 
 class KeyboardVC: UIViewController {
-
+    
     var delegate: KeyboardVCDelegate?
     
     var resultData: String = "" {
@@ -32,18 +31,16 @@ class KeyboardVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func hiddenKeyboard(_ sender: UIButton) {
-        delegate?.shouldDismissKeyboard()
-        NotificationCenter.default.post(name: NSNotification.Name.init(rawValue: NotificationKey.toggleKeyBoard), object: nil)
+        NotificationCenter.default.post(name: NSNotification.Name.init(rawValue: NotificationKey.toggleKeyboard), object: nil)
     }
     
     @IBAction func handleButtonPress(_ sender: UIButton) {

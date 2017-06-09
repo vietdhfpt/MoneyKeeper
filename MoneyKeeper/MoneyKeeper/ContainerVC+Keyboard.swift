@@ -12,28 +12,16 @@ extension ContainerVC {
     func setStageForKeyboard(isOpenKeyboard: Bool) {
         if isOpenKeyBoard {
             keyBoardView.isHidden = false
-            UIView.animate(withDuration: 0.5, animations: {
-                self.configOpenKeyBoardStage()
-                self.view.layoutIfNeeded()
-            }, completion: { (isSuccess) in
-                
-            })
-        } else {
-            UIView.animate(withDuration: 0.5, animations: {
-                self.configCloseKeyBoardStage()
-                self.view.layoutIfNeeded()
-            }, completion: { (isSuccess) in
-                self.keyBoardView.isHidden = true
-            })
         }
-    }
-    
-    func configOpenKeyBoardStage() {
-        botConstrainKeyboardView.constant = 0
-    }
-    
-    func configCloseKeyBoardStage() {
-        botConstrainKeyboardView.constant = -keyBoardView.frame.height
+        UIView.animate(withDuration: 0.5, animations: {
+            //self.configOpenKeyBoardStage()
+            self.botConstrainKeyboardView.constant = isOpenKeyboard ? 0 : -self.keyBoardView.frame.height
+            self.view.layoutIfNeeded()
+        }, completion: { (isSuccess) in
+            if !isOpenKeyboard {
+                self.keyBoardView.isHidden = true
+            }
+        })
     }
     
     func changeKeyBoardStage() {

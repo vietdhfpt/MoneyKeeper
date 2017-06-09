@@ -29,8 +29,8 @@ class ContainerVC: UIViewController {
     
     override var title: String? {
         didSet {
-            nameTitleOfButton.titleLabel?.text = title ?? ""
-
+            // set title for menu
+            nameTitleOfButton.setTitle(title, for: UIControlState.normal)
         }
     }
     
@@ -42,14 +42,14 @@ class ContainerVC: UIViewController {
             setStageForKeyboard(isOpenKeyboard: isOpenKeyBoard)
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        configView()
+        buttonCover.addTarget(self, action: #selector(showMenu), for: UIControlEvents.touchDown)
         isOpenMenu = false
         isOpenKeyBoard = false
         registerNotification()
@@ -61,7 +61,7 @@ class ContainerVC: UIViewController {
     }
     
     func registerNotification() {
-        NotificationCenter.default.addObserver(self, selector: #selector(changeKeyBoardStage), name: NSNotification.Name.init(rawValue: NotificationKey.toggleKeyBoard), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(changeKeyBoardStage), name: NSNotification.Name.init(rawValue: NotificationKey.toggleKeyboard), object: nil)
     }
     
     deinit {
@@ -70,7 +70,6 @@ class ContainerVC: UIViewController {
     
     var menuTabTableVC: MenuTabTableVC?
     var keyboardVC: KeyboardVC?
-    var expenseTabTableVC: ExpenseTabTableVC?
     var pageVC: PageVC?
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -80,7 +79,7 @@ class ContainerVC: UIViewController {
             menuTabTableVC?.delegate = self
         case SegueIdentifier.embedKeyboard:
             keyboardVC = segue.destination as? KeyboardVC
-            keyboardVC?.delegate = expenseTabTableVC
+            keyboardVC?.delegate = pageVC?.expenseTabTableVC
         case SegueIdentifier.embedPageVC:
             pageVC = segue.destination as? PageVC
         default:
@@ -89,12 +88,6 @@ class ContainerVC: UIViewController {
     }
 }
 
-extension ContainerVC: MenuTabTableVCDelegate {
-    func passedIndexOfPageVC(toIndex: Int) {
-        pageVC?.jump(toIndex: toIndex)
-        isOpenMenu = false
-    }    
-}
 
 
 

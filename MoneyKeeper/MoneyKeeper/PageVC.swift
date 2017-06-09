@@ -9,14 +9,14 @@
 import UIKit
 
 class PageVC: UIPageViewController {
-
+    
     var modelController = BaseModelController()
     var startViewControllerIndex = 0
     var index = 0
-        
+    var expenseTabTableVC: ExpenseTabTableVC?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         delegate = self
         dataSource = modelController
         if let startingViewController: UIViewController = self.modelController.viewControllerAtIndex(startViewControllerIndex) {
@@ -25,7 +25,8 @@ class PageVC: UIPageViewController {
             setViewControllers(viewControllers, direction: .forward, animated: false, completion: {done in })
         }
     }
-
+    
+    // page control
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         for view in view.subviews {
@@ -33,7 +34,6 @@ class PageVC: UIPageViewController {
                 view.frame = UIScreen.main.bounds
             } else if view is UIPageControl {
                 view.backgroundColor = UIColor.clear
-                
             }
         }
         

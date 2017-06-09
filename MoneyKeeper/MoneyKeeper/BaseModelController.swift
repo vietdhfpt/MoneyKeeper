@@ -57,5 +57,5 @@ class BaseModelController: NSObject, UIPageViewControllerDataSource {
         }
         return self.viewControllerAtIndex(index)
     }
-
+    
 }

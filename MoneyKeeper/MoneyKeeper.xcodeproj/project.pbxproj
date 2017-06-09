@@ -31,6 +31,7 @@
 		8D1292911EE6A28600CDB8E9 /* BaseModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1292901EE6A28600CDB8E9 /* BaseModelController.swift */; };
 		8D1292931EE6AB6F00CDB8E9 /* KeyboardVC+calculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1292921EE6AB6F00CDB8E9 /* KeyboardVC+calculate.swift */; };
 		8D1CF2C21EDD80C500B45DB5 /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1CF2C11EDD80C500B45DB5 /* PageVC.swift */; };
+		8D5C09791EEA39EB00C8BD72 /* ContainerVC+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C09781EEA39EB00C8BD72 /* ContainerVC+Delegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		8D1292901EE6A28600CDB8E9 /* BaseModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModelController.swift; sourceTree = "<group>"; };
 		8D1292921EE6AB6F00CDB8E9 /* KeyboardVC+calculate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KeyboardVC+calculate.swift"; sourceTree = "<group>"; };
 		8D1CF2C11EDD80C500B45DB5 /* PageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
+		8D5C09781EEA39EB00C8BD72 /* ContainerVC+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ContainerVC+Delegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,7 +162,7 @@
 		3B9E55FB1ED80FC2005F1200 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3B9E55FE1ED81004005F1200 /* Container+Manage */,
+				3B9E55FE1ED81004005F1200 /* Main */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -188,15 +190,15 @@
 			name = Support;
 			sourceTree = "<group>";
 		};
-		3B9E55FE1ED81004005F1200 /* Container+Manage */ = {
+		3B9E55FE1ED81004005F1200 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				8D2E92431EE833860009990B /* Container */,
-				3B9E56121ED827E9005F1200 /* Keyboard */,
-				3B9E56081ED821BE005F1200 /* MenuTab */,
 				8DF819871EE6CF1E003C0723 /* PageOfContainer */,
+				3B9E56081ED821BE005F1200 /* MenuTab */,
+				3B9E56121ED827E9005F1200 /* Keyboard */,
 			);
-			name = "Container+Manage";
+			name = Main;
 			sourceTree = "<group>";
 		};
 		3B9E56081ED821BE005F1200 /* MenuTab */ = {
@@ -259,6 +261,7 @@
 				3B9E55FF1ED8102A005F1200 /* ContainerVC.swift */,
 				3B9E56041ED811B1005F1200 /* ContainerVC+Keyboard.swift */,
 				3B9E56011ED8116F005F1200 /* ContainerVC+Sidemenu.swift */,
+				8D5C09781EEA39EB00C8BD72 /* ContainerVC+Delegate.swift */,
 			);
 			name = Container;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				8D12928F1EE69F6300CDB8E9 /* AdjustmentTabTableVC.swift in Sources */,
 				8D12928D1EE69F4900CDB8E9 /* TransferTabTableVC.swift in Sources */,
 				3B9E56111ED82776005F1200 /* ExpenseTabTableVC+Delegate.swift in Sources */,
+				8D5C09791EEA39EB00C8BD72 /* ContainerVC+Delegate.swift in Sources */,
 				3B9E55CB1ED80EEF005F1200 /* AppDelegate.swift in Sources */,
 				8D0F6BD31EE4DE5700E46AD5 /* Extension+UIColor.swift in Sources */,
 			);

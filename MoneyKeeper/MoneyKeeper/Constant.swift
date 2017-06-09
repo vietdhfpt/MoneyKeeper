@@ -9,7 +9,7 @@
 import Foundation
 
 struct NotificationKey {
-    static let toggleKeyBoard = "toggleKeyBoard"
+    static let toggleKeyboard = "toggleKeyboard"
 }
 
 

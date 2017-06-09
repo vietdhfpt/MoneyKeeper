@@ -10,8 +10,7 @@ import UIKit
 
 extension ExpenseTabTableVC: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        NotificationCenter.default.post(name: NSNotification.Name.init(rawValue: NotificationKey.toggleKeyBoard), object: nil)
-        calculateTextField.resignFirstResponder()
+        NotificationCenter.default.post(name: NSNotification.Name.init(rawValue: NotificationKey.toggleKeyboard), object: nil)
         return true
     }
 }
@@ -20,10 +19,6 @@ extension ExpenseTabTableVC: UITextFieldDelegate {
 extension ExpenseTabTableVC: KeyboardVCDelegate {
     func passedData(data: String) {
         calculateTextField.text = data
-    }
-    
-    func shouldDismissKeyboard() {
-        calculateTextField.resignFirstResponder()
     }
 }
 
